@@ -4,14 +4,14 @@
 
 # ZarchBlack Linux 🌌
 
-**A powerful, beautiful, security-focused Arch Linux distribution**  
+**A powerful, beautiful, security-focused Arch Linux distribution**
 Built for developers, cybersecurity specialists, and advanced Linux enthusiasts.
 
 [![Website](https://img.shields.io/badge/🌐_Website-zarchblack.pages.dev-8B5CF6?style=for-the-badge)](https://zarchblack.pages.dev/)
 [![Download ISO](https://img.shields.io/badge/Download_ISO-HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/datasets/zarchblack/zarchblack-releases/tree/main)
 [![Latest Release](https://img.shields.io/github/v/release/ZarchBlack/zarchblack-repo?style=for-the-badge&label=Latest%20Release&color=blueviolet)](https://github.com/ZarchBlack/zarchblack-repo/releases/latest)
 
-[![ShellCheck](https://github.com/ZarchBlack/zarchblack-repo/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ZarchBlack/zarchblack-repo/actions/workflows/shellcheck.yml)
+[![ShellCheck](https://github.com/ZarchBlack/zarchblack-iso-builder/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ZarchBlack/zarchblack-iso-builder/actions/workflows/shellcheck.yml)
 [![Based on Arch](https://img.shields.io/badge/Based%20on-Arch%20Linux-1793D1?style=flat-square&logo=arch-linux&logoColor=white)](https://archlinux.org)
 [![KDE Plasma 6](https://img.shields.io/badge/Desktop-KDE%20Plasma%206-1D99F3?style=flat-square&logo=kde&logoColor=white)](https://kde.org/plasma-desktop/)
 [![Wayland](https://img.shields.io/badge/Session-Wayland-F05032?style=flat-square)](https://wayland.freedesktop.org/)
@@ -25,18 +25,20 @@ Built for developers, cybersecurity specialists, and advanced Linux enthusiasts.
 
 | Repository | Purpose |
 |---|---|
-| [📦 zarchblack-repo](https://github.com/ZarchBlack/zarchblack-repo) | Main ISO build profile + all custom PKGBUILDs |
+| [🏗️ zarchblack-iso-builder](https://github.com/ZarchBlack/zarchblack-iso-builder) | ISO build profile + all custom PKGBUILDs |
+| [📦 zarchblack-repo](https://github.com/ZarchBlack/zarchblack-repo) | Custom package repository (pacman) |
 
 ---
 
 ## ✨ What Makes ZarchBlack Different
 
 ```
-🛡️  Security-first   →  firewalld + firejail + BlackArch repo integration
+🛡️  Security-first   →  firewalld + firejail + AppArmor
 ⚡  Performance      →  linux-zen kernel + full CachyOS repositories
 🎨  Visual beauty    →  Catppuccin Mocha Lavender + Darkly + Layan decorations
-🔧  Custom tools     →  zarch-hacking, zarchguard, zpackagemanager
+🔧  Custom tools     →  zarchcare, zpackagemanager
 🌐  Wayland native   →  KDE Plasma 6 on Wayland by default (2026)
+🌐  Privacy browser  →  Brave Origin + Thorium pre-installed
 ```
 
 ---
@@ -58,7 +60,7 @@ SigLevel = Required DatabaseOptional
 Server = https://github.com/ZarchBlack/zarchblack-repo/releases/download/repo' | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Sy
-sudo pacman -S zarch-hacking zarchguard zpackagemanager
+sudo pacman -S zarchcare zpackagemanager
 ```
 
 > Or **[Download the full ISO](https://huggingface.co/datasets/zarchblack/zarchblack-releases/tree/main)** for a complete ZarchBlack experience.
@@ -69,8 +71,7 @@ sudo pacman -S zarch-hacking zarchguard zpackagemanager
 
 | Package | Description |
 |---|---|
-| `zarch-hacking` | 🥷 BlackArch integration & categorized security tools |
-| `zarchguard` | 🛡️ Smart updates, deep clean & system maintenance |
+| `zarchcare` | 🛡️ System health toolkit: updates, cleanup, diagnostics, disk analysis |
 | `zpackagemanager` | 📦 Advanced package management CLI |
 | `opencode-desktop` | 💻 OpenCode AI-powered development environment |
 | `zarchblack-icons` | 🎨 Custom ZarchBlack icon theme |
@@ -82,9 +83,8 @@ sudo pacman -S zarch-hacking zarchguard zpackagemanager
 
 | Version | Date | Download |
 |---|---|---|
+| [v2026.11.25](https://github.com/ZarchBlack/zarchblack-repo/releases/tag/v2026.11.25) | 2026-11-25 | [HuggingFace](https://huggingface.co/datasets/zarchblack/zarchblack-releases/tree/main) |
 | [v2026.07.07](https://github.com/ZarchBlack/zarchblack-repo/releases/tag/v2026.07.07) | 2026-07-07 | [HuggingFace](https://huggingface.co/datasets/zarchblack/zarchblack-releases/tree/main) |
-
-See the full [CHANGELOG](https://github.com/ZarchBlack/zarchblack-repo/blob/main/CHANGELOG.md) for all release history.
 
 ---
 
@@ -94,14 +94,15 @@ See the full [CHANGELOG](https://github.com/ZarchBlack/zarchblack-repo/blob/main
 |---|---|
 | 🌐 **Website** | [zarchblack.pages.dev](https://zarchblack.pages.dev/) |
 | 📥 **Download ISO** | [HuggingFace Datasets](https://huggingface.co/datasets/zarchblack/zarchblack-releases/tree/main) |
-| 🐛 **Bug Reports** | [GitHub Issues](https://github.com/ZarchBlack/zarchblack-repo/issues) |
-| 📖 **Changelog** | [CHANGELOG.md](https://github.com/ZarchBlack/zarchblack-repo/blob/main/CHANGELOG.md) |
-| 🤝 **Contributing** | [CONTRIBUTING.md](https://github.com/ZarchBlack/zarchblack-repo/blob/main/CONTRIBUTING.md) |
+| 🐛 **Bug Reports** | [GitHub Issues](https://github.com/ZarchBlack/zarchblack-iso-builder/issues) |
+| 📖 **Changelog** | [CHANGELOG.md](https://github.com/ZarchBlack/zarchblack-iso-builder/blob/main/CHANGELOG.md) |
+| 🤝 **Contributing** | [CONTRIBUTING.md](https://github.com/ZarchBlack/zarchblack-iso-builder/blob/main/CONTRIBUTING.md) |
 
 ---
 
 <div align="center">
 
-*Made with ❤️ by **Zero7x** — ZarchBlack is licensed under [GPLv3](https://github.com/ZarchBlack/zarchblack-repo/blob/main/LICENSE)*
+*Made with ❤️ by **Zero7x** — ZarchBlack is licensed under [GPLv3](LICENSE)*
 
 </div>
+
